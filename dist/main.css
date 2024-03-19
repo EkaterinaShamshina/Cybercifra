@@ -366,9 +366,14 @@ h1 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
   text-align: center;
+}
+
+h3 {
+  color: rgb(44, 169, 188);
 }
 
 p {
@@ -535,7 +540,160 @@ p {
 
 .technologies {
   background-color: #f6f6f8;
+  padding: 10rem 0;
 }
 .technologies h2 {
-  padding: 10rem 0;
+  margin-bottom: 4rem;
+}
+
+.instruments-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  position: relative;
+  margin: 4rem 0 4rem;
+}
+.instruments-item {
+  mix-blend-mode: luminosity;
+  cursor: pointer;
+  border: 1px solid rgba(161, 161, 161, 0.5);
+  height: 14.8rem;
+  width: 100%;
+  display: block;
+}
+.instruments-item:hover {
+  mix-blend-mode: normal;
+  border: 1px solid #a1a1a1;
+}
+@media (max-width: 1200px) {
+  .instruments-item {
+    height: calc((100vw - 340px) / 800 * 103 + 45px);
+  }
+}
+@media (max-width: 430px) {
+  .instruments-item {
+    height: 4.4rem;
+  }
+}
+.instruments__cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.instruments__cover p {
+  font-size: 5rem;
+}
+.instruments__picture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 107px;
+  height: 80px;
+}
+@media (max-width: 1200px) {
+  .instruments__picture {
+    height: calc((100vw - 340px) / 800 * 55 + 25px);
+    width: calc((100vw - 340px) / 800 * 75 + 25px);
+  }
+}
+
+[data-tooltip][data-flow^=down]::before {
+  top: 90%;
+  border-top-width: 0;
+  border-bottom-color: rgb(44, 169, 188);
+}
+
+[data-tooltip][data-flow^=down]::after {
+  top: calc(90% + 5px);
+}
+
+[data-tooltip][data-flow^=down]::before,
+[data-tooltip][data-flow^=down]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0.5em);
+          transform: translate(-50%, 0.5em);
+}
+
+@-webkit-keyframes data-tooltips-vert {
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@keyframes data-tooltips-vert {
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+[data-tooltip]:not([data-flow]):hover::before,
+[data-tooltip]:not([data-flow]):hover::after,
+[data-tooltip][data-flow^=down]:hover::before,
+[data-tooltip][data-flow^=down]:hover::after {
+  -webkit-animation: data-tooltips-vert 300ms ease-out forwards;
+          animation: data-tooltips-vert 300ms ease-out forwards;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]::before, [data-tooltip]::after {
+  line-height: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[data-tooltip]::before {
+  content: "";
+  z-index: 1001;
+  border: 5px solid transparent;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  z-index: 1000;
+  text-align: center;
+  /* 
+  Let the content set the size of the data-tooltips 
+  but this will also keep them from being obnoxious
+  */
+  width: 70%;
+  white-space: pre-wrap;
+  /* visible design of the data-tooltip bubbles */
+  padding: 3rem 1.5rem;
+  -webkit-box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+          box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+  background: rgb(44, 169, 188);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+[data-tooltip]:hover::before, [data-tooltip]:hover::after {
+  display: block;
+}
+@media (max-width: 768px) {
+  [data-tooltip]:hover::before, [data-tooltip]:hover::after {
+    display: none;
+  }
 }

@@ -25,9 +25,13 @@ h1 {
   font-size: 4.8rem;
 }
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
   text-align: center;
+}
+h3 {
+  color: rgb(44, 169, 188);
 }
 p {
   margin: 0;
@@ -188,7 +192,131 @@ p {
 }
 .technologies {
   background-color: $bg-gray;
+  padding: 10rem 0;
   & h2 {
-    padding: 10rem 0;
+    margin-bottom: 4rem;
+  }
+}
+.instruments {
+  &-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    position: relative;
+    margin: 4rem 0 4rem;
+  }
+  &-item {
+    mix-blend-mode: luminosity;
+    cursor: pointer;
+    border: 1px solid rgba($gray, 0.5);
+    height: 14.8rem;
+    width: 100%;
+    display: block;
+    &:hover {
+      mix-blend-mode: normal;
+      border: 1px solid rgba($gray, 1);
+    }
+    @media (max-width: $r_desk_hd) {
+      height: calc((100vw - 340px) / (1140 - 340) * (148 - 45) + 45px);
+    }
+    @media (max-width: $r_tab_430) {
+      height: 4.4rem;
+    }
+  }
+  &__cover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & p {
+      font-size: 5rem;
+    }
+  }
+  &__picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 107px;
+    height: 80px;
+    @media (max-width: $r_desk_hd) {
+      height: calc((100vw - 340px) / (1140 - 340) * (80 - 25) + 25px);
+      width: calc((100vw - 340px) / (1140 - 340) * (107 - 32) + 25px);
+    }
+  }
+}
+[data-tooltip][data-flow^='down']::before {
+  top: 90%;
+  border-top-width: 0;
+  border-bottom-color: rgb(44, 169, 188);
+}
+[data-tooltip][data-flow^='down']::after {
+  top: calc(90% + 5px);
+}
+[data-tooltip][data-flow^='down']::before,
+[data-tooltip][data-flow^='down']::after {
+  left: 50%;
+  transform: translate(-50%, 0.5em);
+}
+@keyframes data-tooltips-vert {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+[data-tooltip]:not([data-flow]):hover::before,
+[data-tooltip]:not([data-flow]):hover::after,
+[data-tooltip][data-flow^='down']:hover::before,
+[data-tooltip][data-flow^='down']:hover::after {
+  animation: data-tooltips-vert 300ms ease-out forwards;
+}
+
+[data-tooltip] {
+  position: relative;
+
+  &::before,
+  &::after {
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    display: none;
+    opacity: 0;
+  }
+  &::before {
+    content: '';
+    z-index: 1001;
+    border: 5px solid transparent;
+  }
+  &::after {
+    content: attr(data-tooltip);
+    z-index: 1000;
+    text-align: center;
+    /* 
+    Let the content set the size of the data-tooltips 
+    but this will also keep them from being obnoxious
+    */
+    width: 70%;
+    white-space: pre-wrap;
+    /* visible design of the data-tooltip bubbles */
+    padding: 3rem 1.5rem;
+    box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+    background: rgb(44, 169, 188);
+    color: $white;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  &:hover::before,
+  &:hover::after {
+    display: block;
+    @media (max-width: $r_tab) {
+      display: none;
+    }
   }
 }
