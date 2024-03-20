@@ -41,6 +41,9 @@ p {
   z-index: 0;
   overflow-x: hidden;
 }
+.heading_name {
+  margin-bottom: 3rem;
+}
 .banner {
   &__box {
     background-image: url(../images/first-screen-image.jpg);
@@ -199,10 +202,7 @@ p {
 }
 .technologies {
   background-color: $bg-gray;
-  padding: 10rem 0;
-  & h2 {
-    margin-bottom: 4rem;
-  }
+  padding: 7rem 0;
 }
 .instruments {
   &-grid {
@@ -327,15 +327,12 @@ p {
     }
   }
 }
+.description {
+  margin-bottom: 3rem;
+  text-align: center;
+}
 .outstaff {
   margin: 10rem 0 10rem;
-  text-align: center;
-  & h2 {
-    margin-bottom: 3rem;
-  }
-  &__description {
-    margin-bottom: 3rem;
-  }
   &__flex {
     display: flex;
     justify-content: space-between;
@@ -351,6 +348,7 @@ p {
       flex-basis: 27%;
       transition: 0.3s;
       gap: 2rem;
+      cursor: pointer;
       & p {
         margin: 0;
       }
@@ -363,6 +361,58 @@ p {
     color: rgb(44, 169, 188);
   }
 }
+.contacts {
+  margin: 8rem 0 8rem;
+}
+.contact-box {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.9;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24rem;
+  justify-content: center;
+  &__contact {
+    text-decoration: none;
+    font-size: 2rem;
+    color: $black;
+    font-weight: 500;
+    align-self: center;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    transition: 0.3s;
+    &_mail {
+      &::before {
+        content: '';
+        display: inline-block;
+        background-image: url(../images/mail.svg);
+        background-size: cover;
+        width: 2.9rem;
+        height: 2.9rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+    &_tel {
+      &::before {
+        content: '';
+        display: inline-block;
+        background-image: url(../images/tel.svg);
+        background-size: cover;
+        width: 2.9rem;
+        height: 2.9rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+    &:hover {
+      color: rgb(44, 169, 188);
+    }
+  }
+}
+
 .footer {
   background-color: $bg-gray;
   &__information {
