@@ -98,6 +98,9 @@ p {
     display: flex;
     justify-content: center;
   }
+  @media (max-width: $r_desk_hd) {
+    flex-basis: 95vw;
+  }
 }
 .logo {
   display: block;
@@ -106,6 +109,9 @@ p {
   height: 8.2rem;
   background-repeat: no-repeat;
   background-size: contain;
+  @media (max-width: $r_tab_430) {
+    height: 5.2rem;
+  }
   &_footer {
     background-image: url(../images/logo_footer.svg);
   }
@@ -116,6 +122,12 @@ p {
   margin: 0;
   display: flex;
   gap: 4rem;
+  @media (max-width: $r_tab_600) {
+    gap: 2rem;
+  }
+  @media (max-width: $r_tab_430) {
+    gap: 1rem;
+  }
 }
 .navigation {
   &__link {
@@ -159,12 +171,19 @@ p {
     padding-top: 7rem;
     margin-bottom: 3.5rem;
   }
+  @media (max-width: $r_tab_600) {
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+  }
   &__list ul {
     margin: 5rem 0 0;
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
     gap: 2rem;
+    @media (max-width: $r_desk) {
+      gap: 1rem;
+    }
   }
   &__item {
     list-style-type: none;
@@ -178,6 +197,12 @@ p {
     gap: 3rem;
     @media (max-width: $r_desk) {
       font-size: 1.6rem;
+    }
+    @media (max-width: $r_tab) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: $r_tab_600) {
+      flex-basis: 100%;
     }
     &::before {
       content: '';
@@ -194,6 +219,16 @@ p {
         height: 7rem;
         width: 7rem;
         background-size: 4.5rem 5rem;
+      }
+      @media (max-width: $r_tab) {
+        height: 6rem;
+        width: 6rem;
+        background-size: 4rem 4.5rem;
+      }
+      @media (max-width: $r_tab_600) {
+        height: 5rem;
+        width: 5rem;
+        background-size: 3rem 4.5rem;
       }
     }
     &_1 {
@@ -285,6 +320,18 @@ p {
     justify-content: center;
     & p {
       font-size: 5rem;
+      @media (max-width: $r_desk) {
+        font-size: 4rem;
+      }
+      @media (max-width: $r_tab) {
+        font-size: 3rem;
+      }
+      @media (max-width: $r_tab_600) {
+        font-size: 2.5rem;
+      }
+      @media (max-width: $r_tab_430) {
+        font-size: 2rem;
+      }
     }
   }
   &__picture {
@@ -404,6 +451,9 @@ p {
       &:hover {
         box-shadow: 0 0 0 2px rgba(44, 169, 188, 0.4) inset;
       }
+      @media (max-width: $r_desk) {
+        flex-basis: 32%;
+      }
     }
   }
   &__price {
@@ -412,6 +462,12 @@ p {
   &__name {
     flex: 1;
     flex-basis: 1rem;
+    @media (max-width: $r_desk) {
+      font-size: 1.6rem;
+    }
+    @media (max-width: $r_tab) {
+      font-size: 1.4rem;
+    }
   }
 }
 .contacts {
@@ -463,6 +519,9 @@ p {
         background-position: center center;
       }
     }
+    @media (max-width: $r_desk) {
+      font-size: 1.5rem;
+    }
     &:hover {
       color: rgb(44, 169, 188);
     }
@@ -481,8 +540,8 @@ p {
 .btn-up {
   position: fixed;
   background-color: rgba(44, 169, 188, 0.6);
-  right: 30px;
-  bottom: 20px;
+  right: 5px;
+  bottom: 100px;
   cursor: pointer;
   height: 5rem;
   width: 5rem;
@@ -497,6 +556,18 @@ p {
     background: transparent no-repeat center center;
     background-size: 100% 100%;
     background-image: url(../images/up-arrow.svg);
+    @media (max-width: $r_tab) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @media (max-width: $r_desk) {
+    width: 4rem;
+    height: 4rem;
+  }
+  @media (max-width: $r_tab) {
+    width: 3rem;
+    height: 3rem;
   }
 }
 .btn-up_hide {
