@@ -23,7 +23,7 @@
         ]
     },
     "globals": {
-      "document": true
+      "document": true,
+      "window": true
   }
-    
 }

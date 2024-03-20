@@ -129,7 +129,8 @@ p {
   }
 }
 .services {
-  margin: 11rem auto 10.5rem;
+  margin: 0 auto 10.5rem;
+  padding-top: 10.5rem;
   &__list ul {
     margin: 5rem 0 0;
     display: flex;
@@ -431,5 +432,34 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-basis: 1113px;
+  }
+}
+.btn-up {
+  position: fixed;
+  background-color: rgba(44, 169, 188, 0.4);
+  right: 20px;
+  bottom: 0;
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  &::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url(../images/up-arrow.svg);
+  }
+}
+.btn-up_hide {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #512da8;
   }
 }
