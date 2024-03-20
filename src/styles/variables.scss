@@ -320,3 +320,11 @@ p {
     }
   }
 }
+.outstaff {
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+  }
+}

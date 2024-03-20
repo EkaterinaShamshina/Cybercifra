@@ -697,3 +697,14 @@ p {
     display: none;
   }
 }
+
+.outstaff__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+}
