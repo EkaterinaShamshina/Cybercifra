@@ -77,21 +77,28 @@ p {
   height: 8.2rem;
   background-repeat: no-repeat;
   background-size: contain;
-}
-.header {
-  &__nav {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-    display: flex;
-    gap: 4rem;
+  &_footer {
+    background-image: url(../images/logo_footer.svg);
   }
+}
+.ul__nav {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  gap: 4rem;
 }
 .navigation {
   &__link {
     color: $white;
     text-decoration: none;
     transition: 0.3s;
+    &_footer {
+      color: $dark;
+      &:hover {
+        color: rgb(44, 169, 188);
+      }
+    }
   }
   &__item {
     &::after {
@@ -321,10 +328,48 @@ p {
   }
 }
 .outstaff {
+  margin: 10rem 0 10rem;
+  text-align: center;
+  & h2 {
+    margin-bottom: 3rem;
+  }
   &__description {
+    margin-bottom: 3rem;
+  }
+  &__flex {
     display: flex;
     justify-content: space-between;
-    margin-top: 10rem;
-    margin-bottom: 8rem;
+    align-items: stretch;
+    &_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgb(44, 169, 188);
+      border-radius: 2rem;
+      padding: 2rem 3rem;
+      flex-basis: 27%;
+      transition: 0.3s;
+      gap: 2rem;
+      & p {
+        margin: 0;
+      }
+      &:hover {
+        box-shadow: 0 0 0 2px rgba(44, 169, 188, 0.4) inset;
+      }
+    }
+  }
+  &__price {
+    color: rgb(44, 169, 188);
+  }
+}
+.footer {
+  background-color: $bg-gray;
+  &__information {
+    margin: 0 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 1113px;
   }
 }

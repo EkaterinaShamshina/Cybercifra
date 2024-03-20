@@ -14,19 +14,25 @@
         <div class="header__box">
           <header class="header">
             <a href="#" class="logo"></a>
-            <nav class="header__navigation">
-              <ul class="header__nav">
+            <nav class="navigation">
+              <ul class="ul__nav">
                 <li class="navigation__item">
                   <a href="#" class="navigation__link">Главная</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link">Услуги</a>
+                  <a href="#section-services" class="navigation__link"
+                    >Услуги</a
+                  >
                 </li>
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link">Технологии</a>
+                  <a href="#section-technologies" class="navigation__link"
+                    >Технологии</a
+                  >
                 </li>
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link">Контакты</a>
+                  <a href="#section-contacts" class="navigation__link"
+                    >Контакты</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -39,7 +45,7 @@
           </div>
         </div>
       </div>
-      <section class="services">
+      <section class="services" id="section-services">
         <div class="container">
           <h2>Мы оказываем следующие услуги:</h2>
           <div class="services__list">
@@ -73,7 +79,7 @@
           </div>
         </div>
       </section>
-      <section class="technologies">
+      <section class="technologies" id="section-technologies">
         <div class="container">
           <h2>Технологии, которые мы используем:</h2>
           <div class="portfolio-instruments">
@@ -232,32 +238,70 @@ Cтрого типизированный объектно-ориентирова
         </div>
       </section>
       <section class="outstaff">
-        <div class="outstaff__description">
+        <div class="container">
           <h2>Аустаффинг персонала</h2>
-          <p>
-            Представленные ниже цены зависят не только от того, какой сайт вы
-            хотите. Конечная цена будет озвучена после прочтения Вашего ТЗ
+          <p class="outstaff__description">
+            Представленные ниже цены зависят не только от того, в каком
+            сотруднике вы нуждаетесь.<br />Конечная цена будет озвучена после
+            прочтения Вашего ТЗ
           </p>
-        </div>
 
-        <div class="outstaff__flex">
-          <div class="outstaff__flex_card">
-            <h3 class="outstaff__name">Бизнес/системные аналитики</h3>
-            <p>Учтем все требования</p>
-            <p class="outstaff__price">от 4 000 руб./час</p>
-          </div>
-          <div class="outstaff__flex_card">
-            <h3 class="outstaff__name">Тестирование ПО</h3>
-            <p>Учтем все требования</p>
-            <p class="outstaff__price">от 2 000 руб./час</p>
-          </div>
-          <div class="outstaff__flex_card">
-            <h3 class="outstaff__name">Разработка ПО</h3>
-            <p>Учтем все требования</p>
-            <p class="outstaff__price">от 3 800 руб./час</p>
+          <div class="outstaff__flex">
+            <div class="outstaff__flex_card">
+              <h3 class="outstaff__name">Бизнес/системные аналитики</h3>
+              <p>Учтем все требования</p>
+              <p class="outstaff__price">от 4 000 руб./час</p>
+            </div>
+            <div class="outstaff__flex_card">
+              <h3 class="outstaff__name">Тестирование ПО</h3>
+              <p>Учтем все требования</p>
+              <p class="outstaff__price">от 2 000 руб./час</p>
+            </div>
+            <div class="outstaff__flex_card">
+              <h3 class="outstaff__name">Разработка ПО</h3>
+              <p>Учтем все требования</p>
+              <p class="outstaff__price">от 3 800 руб./час</p>
+            </div>
           </div>
         </div>
       </section>
+    </div>
+    <div class="footer footer">
+      <div class="container">
+        <div class="footer__information">
+          <a href="#" class="logo logo_footer"></a>
+          <nav class="navigation">
+            <ul class="ul__nav">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link_footer"
+                  >Главная</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#section-services"
+                  class="navigation__link navigation__link_footer"
+                  >Услуги</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#section-technologies"
+                  class="navigation__link navigation__link_footer"
+                  >Технологии</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#section-contacts"
+                  class="navigation__link navigation__link_footer"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </body>
 </html>
