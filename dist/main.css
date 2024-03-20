@@ -365,6 +365,10 @@ h1 {
   font-size: 4.8rem;
 }
 
+h2 {
+  font-size: 2.8rem;
+}
+
 h1,
 h2,
 h3 {
@@ -408,7 +412,6 @@ p {
 }
 
 .header {
-  margin: 0 2rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,6 +482,9 @@ p {
 }
 .navigation__item:hover::after {
   width: 100%;
+}
+.navigation__item_footer::after {
+  display: none;
 }
 
 .services {
@@ -761,6 +767,13 @@ p {
 .outstaff__price {
   color: rgb(44, 169, 188);
 }
+.outstaff__name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 1rem;
+      flex-basis: 1rem;
+}
 
 .contacts {
   margin: 8rem 0 8rem;
@@ -827,7 +840,6 @@ p {
   background-color: #f6f6f8;
 }
 .footer__information {
-  margin: 0 2rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

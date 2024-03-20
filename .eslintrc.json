@@ -21,5 +21,9 @@
               "endOfLine": "auto"
             }
         ]
-    }
+    },
+    "globals": {
+      "document": true
+  }
+    
 }

@@ -24,6 +24,9 @@ body {
 h1 {
   font-size: 4.8rem;
 }
+h2 {
+  font-size: 2.8rem;
+}
 h1,
 h2,
 h3 {
@@ -62,7 +65,6 @@ p {
   margin: 0 auto;
 }
 .header {
-  margin: 0 2rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,6 +119,11 @@ p {
     &:hover {
       &::after {
         width: 100%;
+      }
+    }
+    &_footer {
+      &::after {
+        display: none;
       }
     }
   }
@@ -360,6 +367,10 @@ p {
   &__price {
     color: rgb(44, 169, 188);
   }
+  &__name {
+    flex: 1;
+    flex-basis: 1rem;
+  }
 }
 .contacts {
   margin: 8rem 0 8rem;
@@ -416,7 +427,6 @@ p {
 .footer {
   background-color: $bg-gray;
   &__information {
-    margin: 0 2rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
