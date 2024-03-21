@@ -291,6 +291,9 @@ p {
   @media (max-width: $r_desk) {
     padding-bottom: 3.5rem;
   }
+  @media (max-width: $r_tab_600) {
+    padding: 4rem 0 0;
+  }
 }
 .instruments {
   &-grid {
@@ -314,8 +317,9 @@ p {
     @media (max-width: $r_desk_hd) {
       height: calc((100vw - 340px) / (1140 - 340) * (148 - 45) + 45px);
     }
-    @media (max-width: $r_tab_430) {
-      height: 4.4rem;
+    @media (max-width: $r_tab) {
+      height: 6.4rem;
+      mix-blend-mode: normal;
     }
   }
   &__cover {
@@ -351,8 +355,8 @@ p {
     width: 107px;
     height: 80px;
     @media (max-width: $r_desk_hd) {
-      height: calc((100vw - 340px) / (1140 - 340) * (80 - 25) + 25px);
-      width: calc((100vw - 340px) / (1140 - 340) * (107 - 32) + 25px);
+      height: calc((100vw - 340px) / (1200 - 340) * (80 - 25) + 25px);
+      width: calc((100vw - 340px) / (1200 - 340) * (107 - 32) + 25px);
     }
   }
 }
@@ -437,6 +441,9 @@ p {
   @media (max-width: $r_desk) {
     margin: 7rem 0 7rem;
   }
+  @media (max-width: $r_tab_600) {
+    margin: 5rem 0 5rem;
+  }
   &__flex {
     display: flex;
     justify-content: space-between;
@@ -493,6 +500,9 @@ p {
   margin: 8rem 0 8rem;
   @media (max-width: $r_desk) {
     margin: 3.5rem 0 7rem;
+  }
+  @media (max-width: $r_tab_600) {
+    margin: 3rem 0 3rem;
   }
 }
 .contact-box {
