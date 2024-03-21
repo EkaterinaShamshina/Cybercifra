@@ -993,6 +993,7 @@ p {
 
 .contact-box {
   list-style-type: none;
+  text-decoration: none;
   padding-left: 0;
   line-height: 1.9;
   margin: 0 auto;
