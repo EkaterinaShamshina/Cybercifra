@@ -447,12 +447,16 @@ p {
       cursor: pointer;
       & p {
         margin: 0;
+        text-align: center;
       }
       &:hover {
         box-shadow: 0 0 0 2px rgba(44, 169, 188, 0.4) inset;
       }
       @media (max-width: $r_desk) {
         flex-basis: 32%;
+      }
+      @media (max-width: $r_tab_600) {
+        gap: 1rem;
       }
     }
   }
@@ -467,6 +471,9 @@ p {
     }
     @media (max-width: $r_tab) {
       font-size: 1.4rem;
+    }
+    @media (max-width: $r_tab_600) {
+      font-size: 1.2rem;
     }
   }
 }
@@ -505,6 +512,10 @@ p {
         height: 2.9rem;
         background-repeat: no-repeat;
         background-position: center center;
+        @media (max-width: $r_tab) {
+          width: 2.2rem;
+          height: 2.2rem;
+        }
       }
     }
     &_tel {
@@ -517,14 +528,23 @@ p {
         height: 2.9rem;
         background-repeat: no-repeat;
         background-position: center center;
+        @media (max-width: $r_tab) {
+          width: 2.2rem;
+          height: 2.2rem;
+        }
       }
     }
     @media (max-width: $r_desk) {
       font-size: 1.5rem;
+      gap: 1rem;
     }
     &:hover {
       color: rgb(44, 169, 188);
     }
+  }
+  @media (max-width: $r_tab) {
+    justify-content: space-between;
+    gap: 0;
   }
 }
 
