@@ -538,6 +538,16 @@ p {
   transition: width 0.4s ease-in-out;
   position: relative;
 }
+@media (max-width: 1200px) {
+  .navigation__item::after {
+    top: calc((100vw - 340px) / 860 * 299.5 + 20.5px);
+  }
+}
+@media (max-width: 430px) {
+  .navigation__item::after {
+    height: 1px;
+  }
+}
 .navigation__item:hover::after {
   width: 100%;
 }

@@ -151,6 +151,12 @@ p {
       top: 3.2rem;
       transition: width 0.4s ease-in-out;
       position: relative;
+      @media (max-width: $r_desk_hd) {
+        top: calc((100vw - 340px) / (1200 - 340) * (320 - 20.5) + 20.5px);
+      }
+      @media (max-width: $r_tab_430) {
+        height: 1px;
+      }
     }
     &:hover {
       &::after {
