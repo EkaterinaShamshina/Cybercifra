@@ -97,6 +97,9 @@ p {
     border-bottom: 1px solid rgba($gray, $alpha: 0.5);
     display: flex;
     justify-content: center;
+    @media (max-width: $r_tab) {
+      border-bottom: none;
+    }
   }
   @media (max-width: $r_desk_hd) {
     flex-basis: 95vw;
@@ -151,11 +154,9 @@ p {
       top: 3.2rem;
       transition: width 0.4s ease-in-out;
       position: relative;
-      @media (max-width: $r_desk_hd) {
-        top: calc((100vw - 340px) / (1200 - 340) * (340 - 20.5) + 20.5px);
-      }
-      @media (max-width: $r_tab_430) {
+      @media (max-width: $r_tab) {
         height: 1px;
+        top: 1rem;
       }
     }
     &:hover {
@@ -429,6 +430,7 @@ p {
 .description {
   margin-bottom: 3rem;
   text-align: center;
+  line-height: 1.7rem;
 }
 .outstaff {
   margin: 10rem 0 10rem;
