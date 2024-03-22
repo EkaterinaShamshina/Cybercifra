@@ -283,6 +283,11 @@ p {
         background-image: url(../images/services/certification-diploma-proof-svgrepo-com.svg);
       }
     }
+    &_10 {
+      &::before {
+        background-image: url(../images/services/design-svgrepo-com.svg);
+      }
+    }
   }
 }
 .technologies {
