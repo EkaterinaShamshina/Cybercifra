@@ -96,13 +96,9 @@ p {
   justify-content: space-between;
   align-items: center;
   max-width: 1113px;
+  margin: 0 auto;
   &__box {
     border-bottom: 1px solid rgba($gray, $alpha: 0.5);
-    display: flex;
-    justify-content: center;
-    @media (max-width: $r_tab) {
-      border-bottom: none;
-    }
   }
   @media (max-width: $r_desk_hd) {
     max-width: 95vw;
@@ -111,6 +107,7 @@ p {
     display: none;
   }
   &_tab {
+    display: none;
     @media (max-width: $r_tab) {
       display: flex;
       align-items: center;
@@ -164,6 +161,9 @@ p {
         color: rgb(44, 169, 188);
       }
     }
+    @media (max-width: $r_tab) {
+      font-size: 2.4rem;
+    }
   }
   &__item {
     &::after {
@@ -176,8 +176,7 @@ p {
       transition: width 0.4s ease-in-out;
       position: relative;
       @media (max-width: $r_tab) {
-        height: 1px;
-        top: 1rem;
+        display: none;
       }
     }
     &:hover {
@@ -192,15 +191,8 @@ p {
     }
   }
   &__tab {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     &.active {
       top: 0;
-    }
-    & nav.header__navigation {
-      order: 0;
     }
     @media (max-width: $r_tab) {
       position: fixed;
@@ -212,6 +204,18 @@ p {
       padding: 80px 40px 10px;
       transition: all 0.4s ease 0s;
       overflow: auto;
+    }
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & li {
+        & a {
+          &:hover {
+            color: rgb(44, 169, 188);
+          }
+        }
+      }
     }
   }
 }

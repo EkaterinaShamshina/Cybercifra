@@ -23,8 +23,9 @@
             "error",
             {
               "endOfLine": "auto"
-            }
-        ]
+            }     
+        ],
+        "no-unused-vars": "off"
     },
     "globals": {
       "document": true,

@@ -1,6 +1,8 @@
 import 'normalize.css'
 import './styles/main.scss'
 
+import $ from 'jquery'
+
 //Smooth scroll
 const anchors = document.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {

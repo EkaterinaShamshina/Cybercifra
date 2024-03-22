@@ -462,20 +462,10 @@ p {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1113px;
+  margin: 0 auto;
 }
 .header__box {
   border-bottom: 1px solid rgba(161, 161, 161, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-@media (max-width: 768px) {
-  .header__box {
-    border-bottom: none;
-  }
 }
 @media (max-width: 1200px) {
   .header {
@@ -486,6 +476,9 @@ p {
   .header {
     display: none;
   }
+}
+.header_tab {
+  display: none;
 }
 @media (max-width: 768px) {
   .header_tab {
@@ -557,6 +550,11 @@ p {
 .navigation__link_footer:hover {
   color: rgb(44, 169, 188);
 }
+@media (max-width: 768px) {
+  .navigation__link {
+    font-size: 2.4rem;
+  }
+}
 .navigation__item::after {
   display: block;
   content: "";
@@ -570,8 +568,7 @@ p {
 }
 @media (max-width: 768px) {
   .navigation__item::after {
-    height: 1px;
-    top: 1rem;
+    display: none;
   }
 }
 .navigation__item:hover::after {
@@ -580,28 +577,8 @@ p {
 .navigation__item_footer::after {
   display: none;
 }
-.navigation__tab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
 .navigation__tab.active {
   top: 0;
-}
-.navigation__tab nav.header__navigation {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
 }
 @media (max-width: 768px) {
   .navigation__tab {
@@ -616,6 +593,21 @@ p {
     transition: all 0.4s ease 0s;
     overflow: auto;
   }
+}
+.navigation__tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navigation__tab ul li a:hover {
+  color: rgb(44, 169, 188);
 }
 
 .services {
