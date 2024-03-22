@@ -369,6 +369,9 @@ p {
     &:hover {
       mix-blend-mode: normal;
       border: 1px solid rgba($gray, 1);
+      @media (max-width: $r_tab) {
+        border: 1px solid rgba($gray, 0.5);
+      }
     }
     @media (max-width: $r_desk_hd) {
       height: calc((100vw - 340px) / (1140 - 340) * (148 - 45) + 45px);
@@ -637,9 +640,6 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-basis: 1113px;
-  }
-  @media (max-width: $r_tab) {
-    display: none;
   }
 }
 .btn-up {
