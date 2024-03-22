@@ -635,6 +635,9 @@ p {
     align-items: center;
     flex-basis: 1113px;
   }
+  @media (max-width: $r_tab) {
+    display: none;
+  }
 }
 .btn-up {
   position: fixed;
