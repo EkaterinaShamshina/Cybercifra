@@ -1153,6 +1153,11 @@ p {
   -ms-flex-preferred-size: 1113px;
       flex-basis: 1113px;
 }
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+}
 
 .btn-up {
   position: fixed;
